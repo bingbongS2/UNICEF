@@ -1,194 +1,387 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNICEF</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-
-
-</head>
-
-<body>
-    <nav>
-        <ul class="nav_list">
-            <img class="logo_img" src="img/logo_img01.png" alt="">
-            <li>소개</li>
-            <li>활동</li>
-            <li>FAQ</li>
-            <li>후원</li>
-        </ul>
-    </nav>
-    <div class="button"></div>
-
-    <section id="#sect1" class="sect1">
-        <article>
-            <div class="title1">
-                <h2>활동 목표가<br />
-                    무엇인가요?</h2>
-            </div>
-            <ul class="explain">
-                <li></li>
-                <li></li>
-            </ul>
-        </article>
-    </section>
-    <section id="#sect2" class="sect2">
-        <article>
-             <h2>어느 지역에서<br />
-                    활동하나요?</h2>
-                   <ul>
-                    <li><img src="img/img_tit_01.png" alt=""></li>
-                    <li><img src="img/img_tit_02.png" alt=""></li>
-                </ul> 
-            <div class="title2">
-                <img src="img/wmap.png" alt="">
-                
-                <ul class="set">
-                    <li>유니세프<br/> 활동 및 국가<br/> 
-                        <span class="con">0</span>개국</li>
-                    <li>유니세프<br/> 직원 수<br/> 
-                        <span class="p">0</span>개국</li>
-                    <li>직원의 85<br/> 
-                        <span class="work">0</span>개국<br/>개발도산국 근무</li>
-                    
-                    
-                </ul>
-            </div>
-           
-        </article>
-    </section>
-    <section id="#sect3" class="sect3">
-        <article>
-            <div class="title3">
-                <h2>사업 활동은<br />
-                    어떤것을 하나요?
-                </h2>
-            </div>
-            <div class="col">
-                <ul class="tab">
-                    <li class="on"><a href="#v1"><img src="img/thum (1).png" alt=""></a></li>
-                    <li><a href="#v2"><img src="img/thum (2).png" alt=""></a></li>
-                    <li><a href="#v3"><img src="img/thum (3).png" alt=""></a></li>
-                    <li><a href="#v4"><img src="img/thum (4).png" alt=""></a></li>
-                    <li><a href="#v5"><img src="img/thum (5).png" alt=""></a></li>
-                </ul>
-                <ul class="video">
-                    <li id="v1" class="on"><iframe width="800" height="412" src="https://www.youtube.com/embed/jLkU6P8Y03A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-                    <li id="v2"><iframe width="800" height="412" src="https://www.youtube.com/embed/yANVGB09xPY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-                    <li id="v3"><iframe width="800" height="412" src="https://www.youtube.com/embed/q2p2HSyTYH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-                    <li id="v4"><iframe width="800" height="412" src="https://www.youtube.com/embed/K0PduKjn3Zc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-                    <li id="v5"><iframe width="800" height="412" src="https://www.youtube.com/embed/UwEE4Fh2Hj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
-                </ul id="">
-            </div>
-        </article>
-    </section>
-    <footer>
-        <ul class="foot_img"> 
-            <li><img src="img/sns1.png" alt=""></li>
-            <li><img src="img/sns2.png" alt=""></li>
-            <li><img src="img/sns3.png" alt=""></li>
-            <li><img src="img/sns4.png" alt=""></li>
-            <li><img src="img/sns5.png" alt=""></li>
-        </ul>
-        <ul class="foot_txt">
-            <li>유니세프소개 저작권안내 개인정보 처리방침 이용약관 오시는길 FAQ 연락처</li>
-            <li>단체명:사단법인 유니세프한국위원회(고유번호:102-82-07606) 주소:[04099]서울시 마포구 서강로 60(창천동) 대표자:송상현</li>
-            <li>COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF .ALL RIGHT RESERVED</li>
-        </ul>
-    </footer>
-    <script src="../js/jquery-3.5.1.min.js"></script>
-    <script src="../js/jquery.mousewheel.js"></script>
-    <script>
-
-          $('section').on('mousewheel',function(event,delta){
-        if(delta>0){
-            var prev=$(this).prev().offset().top
-            $('html').stop().animate({'scrollTop': prev},500)
-       
-        }
-        else if(delta<0){
-            var next=$(this).next().offset().top
-            $('html').stop().animate({'scrollTop': next},500)
-         
-        }
-    })
-   
-    function move(){
-            var i=0
-            if(i == 0){
-             i=0;
-             var id = setInterval(frame, .3);
-             function frame(){
-                 if(i>=190){
-                    clearInterval(id);
-                    i=0;
-                 }
-                 else{
-                    i++;       
-        $('.con').html(i);  
-                 }
-             };
-            }
-        }
-        
-  move()
-    function p(){
-            var i=0
-            if(i == 0){
-             i=0;
-             var id = setInterval(frame, 1);
-             function frame(){
-                 if(i>=13000){
-                    clearInterval(id);
-                    i=0;
-                 }
-                 else{
-                    i+=10;       
-        $('.p').html(i)  
-                 }
-             };
-            }
-        }
-        
-  p()
-    function work(){
-            var i=0
-            if(i == 0){
-             i=0;
-             var id = setInterval(frame, .3);
-             function frame(){
-                 if(i>=157){
-                    clearInterval(id);
-                    i=0;
-                 }
-                 else{
-                    i++;       
-        $('.work').html(i);  
-                 }
-             };
-            }
-        }
-        
-  work()
-   $('tab li').click(function (e) {
-       e.preventDefault
-            var i = $(this).index()
-        
-            $('.video li').removeClass('on')
-            $('.video li').eq(i).addClass('on')
-        
-            $('.tab li').removeClass('on')
-            $('.tab li').eq(i).addClass('on')
-
-        })
-    </script>
-</body>
-
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNICEF</title>
+
+    <link rel="stylesheet" href="/reset.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/nav.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+    <nav>
+
+        <ul class="nav_list">
+
+            <img class="logo_img" src="img/logo_img01.png" alt="">
+
+            <li>소개</li>
+
+            <li>활동</li>
+
+            <li>FAQ</li>
+
+            <li>후원</li>
+
+        </ul>
+
+    </nav>
+
+    <div class="button"></div>
+
+
+
+    <section id="#sect1" class="sect1">
+
+        <article>
+
+            <div class="title1">
+
+                <h2>활동 목표가<br />
+
+                    무엇인가요?</h2>
+
+            </div>
+
+            <ul class="explain">
+
+                <li></li>
+
+                <li></li>
+
+            </ul>
+
+        </article>
+
+    </section>
+
+    <section id="#sect2" class="sect2">
+
+        <article>
+
+             <h2>어느 지역에서<br />
+
+                    활동하나요?</h2>
+
+                   <ul>
+
+                    <li><img src="img/img_tit_01.png" alt=""></li>
+
+                    <li><img src="img/img_tit_02.png" alt=""></li>
+
+                </ul> 
+
+            <div class="title2">
+
+                <img src="img/wmap.png" alt="">
+
+                
+
+                <ul class="set">
+
+                    <li>유니세프<br/> 활동 및 국가<br/> 
+
+                        <span class="con">0</span>개국</li>
+
+                    <li>유니세프<br/> 직원 수<br/> 
+
+                        <span class="p">0</span>개국</li>
+
+                    <li>직원의 85<br/> 
+
+                        <span class="work">0</span>개국<br/>개발도산국 근무</li>
+
+                    
+
+                    
+
+                </ul>
+
+            </div>
+
+           
+
+        </article>
+
+    </section>
+
+    <section id="#sect3" class="sect3">
+
+        <article>
+
+            <div class="title3">
+
+                <h2>사업 활동은<br />
+
+                    어떤것을 하나요?
+
+                </h2>
+
+            </div>
+
+            <div class="col">
+
+                <ul class="tab">
+
+                    <li class="on"><a href="#v1"><img src="img/thum (1).png" alt=""></a></li>
+
+                    <li><a href="#v2"><img src="img/thum (2).png" alt=""></a></li>
+
+                    <li><a href="#v3"><img src="img/thum (3).png" alt=""></a></li>
+
+                    <li><a href="#v4"><img src="img/thum (4).png" alt=""></a></li>
+
+                    <li><a href="#v5"><img src="img/thum (5).png" alt=""></a></li>
+
+                </ul>
+
+                <ul class="video">
+
+                    <li id="v1" class="on"><iframe width="800" height="412" src="https://www.youtube.com/embed/jLkU6P8Y03A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                    <li id="v2"><iframe width="800" height="412" src="https://www.youtube.com/embed/yANVGB09xPY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                    <li id="v3"><iframe width="800" height="412" src="https://www.youtube.com/embed/q2p2HSyTYH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                    <li id="v4"><iframe width="800" height="412" src="https://www.youtube.com/embed/K0PduKjn3Zc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                    <li id="v5"><iframe width="800" height="412" src="https://www.youtube.com/embed/UwEE4Fh2Hj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                </ul id="">
+
+            </div>
+
+        </article>
+
+    </section>
+
+    <footer>
+
+        <ul class="foot_img"> 
+
+            <li><img src="img/sns1.png" alt=""></li>
+
+            <li><img src="img/sns2.png" alt=""></li>
+
+            <li><img src="img/sns3.png" alt=""></li>
+
+            <li><img src="img/sns4.png" alt=""></li>
+
+            <li><img src="img/sns5.png" alt=""></li>
+
+        </ul>
+
+        <ul class="foot_txt">
+
+            <li>유니세프소개 저작권안내 개인정보 처리방침 이용약관 오시는길 FAQ 연락처</li>
+
+            <li>단체명:사단법인 유니세프한국위원회(고유번호:102-82-07606) 주소:[04099]서울시 마포구 서강로 60(창천동) 대표자:송상현</li>
+
+            <li>COPYRIGHT @ THE KOREAN COMMITTEE FOR UNICEF .ALL RIGHT RESERVED</li>
+
+        </ul>
+
+    </footer>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <script src="../js/jquery.mousewheel.js"></script>
+
+    <script>
+
+
+
+          $('section').on('mousewheel',function(event,delta){
+
+        if(delta>0){
+
+            var prev=$(this).prev().offset().top
+
+            $('html').stop().animate({'scrollTop': prev},500)
+
+       
+
+        }
+
+        else if(delta<0){
+
+            var next=$(this).next().offset().top
+
+            $('html').stop().animate({'scrollTop': next},500)
+
+         
+
+        }
+
+    })
+
+   
+
+    function move(){
+
+            var i=0
+
+            if(i == 0){
+
+             i=0;
+
+             var id = setInterval(frame, .3);
+
+             function frame(){
+
+                 if(i>=190){
+
+                    clearInterval(id);
+
+                    i=0;
+
+                 }
+
+                 else{
+
+                    i++;       
+
+        $('.con').html(i);  
+
+                 }
+
+             };
+
+            }
+
+        }
+
+        
+
+  move()
+
+    function p(){
+
+            var i=0
+
+            if(i == 0){
+
+             i=0;
+
+             var id = setInterval(frame, 1);
+
+             function frame(){
+
+                 if(i>=13000){
+
+                    clearInterval(id);
+
+                    i=0;
+
+                 }
+
+                 else{
+
+                    i+=10;       
+
+        $('.p').html(i)  
+
+                 }
+
+             };
+
+            }
+
+        }
+
+        
+
+  p()
+
+    function work(){
+
+            var i=0
+
+            if(i == 0){
+
+             i=0;
+
+             var id = setInterval(frame, .3);
+
+             function frame(){
+
+                 if(i>=157){
+
+                    clearInterval(id);
+
+                    i=0;
+
+                 }
+
+                 else{
+
+                    i++;       
+
+        $('.work').html(i);  
+
+                 }
+
+             };
+
+            }
+
+        }
+
+        
+
+  work()
+
+   $('tab li').click(function (e) {
+
+       e.preventDefault
+
+            var i = $(this).index()
+
+        
+
+            $('.video li').removeClass('on')
+
+            $('.video li').eq(i).addClass('on')
+
+        
+
+            $('.tab li').removeClass('on')
+
+            $('.tab li').eq(i).addClass('on')
+
+
+
+        })
+
+    </script>
+
+</body>
+
+
+
 </html>
